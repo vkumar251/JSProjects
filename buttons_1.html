@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible", content="IE-edge">
+        <title>Buttons | JSProject</title>
+        <link rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <link rel="stylesheet", href="css/style.css">
+        <style>
+            body {font-family: Arial;}
+            section {border: 2px solid black; margin: 4rem auto; width: 50%;}
+            h1 {text-align: center; border-bottom: 2px solid black;}
+            h1 {background-color: gold; padding: 1rem;}
+            button {padding: 0.5rem 2rem; margin: 1rem;}
+            .flex-container {display: flex; justify-content: space-between;}
+            .flex-item {width: 45%; margin: 1rem; border: 1px solid black; display: flex; align-items: center; justify-content: center;}
+        </style>
+    </head>
+    <body>
+        <header></header>
+        <main>
+            <section>
+                <h1>Menu</h1>
+                <div class="flex-container">
+                    <div class="flex-item">
+                        <button onClick="changeP1()">Click me</button>
+                    </div>
+                    <div class="flex-item">
+                        <p id="p1">This is paragraph 1</p>
+                    </div>
+                </div>
+                <div class="flex-container">
+                    <div class="flex-item">
+                        <button onClick="changeP2()">Click me</button>
+                    </div>
+                    <div class="flex-item">
+                        <p id="p2">This is paragraph 2</p>
+                    </div>
+                </div>
+                <div class="flex-container">
+                    <div class="flex-item">
+                        <button onClick="changeP3()">Click me</button>
+                    </div>
+                    <div class="flex-item">
+                        <p id="p3">This is paragraph 3</p>
+                    </div>
+                </div>
+                <div class="flex-container">
+                    <div class="flex-item">
+                        <button onClick="changeP4()">Click me</button>
+                    </div>
+                    <div class="flex-item">
+                        <p id="p4">This is paragraph 4</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer></footer>
+        <script>
+            function changeP1()  // change paragraph 1
+            {
+                var paragraph = document.getElementById("p1"); // create variable
+                paragraph.textContent = "This is paragraph 1, that has been changed!"; // change text
+            }
+            function changeP2() // change paragraph 2
+            {
+                var paragraph = document.getElementById("p2"); // create variable
+                paragraph.textContent = "This is paragraph 2, that has been changed!"; // change text
+            }
+            function changeP3() // change paragraph 3
+            {
+                var paragraph = document.getElementById("p3"); // create variable
+                paragraph.textContent = "This is paragraph 3, that has been changed!"; // change text
+            }
+            function changeP4() // change paragraph 4
+            {
+                var paragraph = document.getElementById("p4"); // create variable
+                paragraph.textContent = "This is paragraph 4, that has been changed!"; // change text
+            }
+        </script>
+    </body>
+</html>
