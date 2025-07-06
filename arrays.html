@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible", content="IE-edge">
+        <title>Arrays | JSProject</title>
+        <link rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <link rel="stylesheet", href="css/style.css">
+    </head>
+    <body>
+        <header>
+        </header>
+        <main>
+            <h1>Subjects</h1>
+            <input type="text", id="searchInput", placeholder="Enter a subject to search.">
+            <button onClick="searchSubject()">Search</button>
+            <div id="searchResult"></div>
+
+            <h2>Add New Subject</h2>
+            <form id="addSubjectForm">
+                <label for="subjectTitle">Subject Name:</label>
+                <input type="text", id="subjectTitle" required>
+                <button type="submit">Add Subject</button>
+            </form>
+            <div id="subjectList"></div>
+        </main>
+        <footer>
+        </footer>
+        <script src="js/arrays.js"></script>
+    </body>
+</html>

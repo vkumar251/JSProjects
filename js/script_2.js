@@ -1,3 +1,25 @@
+function openMenu()
+{
+    var selected = 1;
+
+    if (selected == 1)
+    {
+        document.getElementById("sec1").style.display = "block";
+    }
+}
+function openMenu()
+{
+    var selected = "section1";
+    if (selected === "section1")
+    {
+        document.getElementById("sec1").style.display = "block";
+    }
+    else
+    {
+        console.log("Section not found.");
+    }
+}
+
 // variable types
 function variableList()
 {

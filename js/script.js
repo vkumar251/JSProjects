@@ -26,6 +26,23 @@ function ifStatement()
         console.log("This number is less than 10.");
     }
 }
+// complex conditional statement
+function temp()
+{
+    var temperature = 19;
+    if (temperature >= 30)
+    {
+        console.log("Today is a hot day.");
+    }
+    else if (temperature >= 20 && temperature < 30)
+    {
+        console.log("Today is a warm day.");
+    }
+    else
+    {
+        console.log("Today is a cold day.");
+    }
+}
 function nameFunction()
 {
     var fName = "firstName";

@@ -12,6 +12,7 @@
             div {margin: 4rem; border: 1px solid black; padding: 2rem;}
             h1 {font-size: 30px;}
             p {font-size: 30px; padding-top: 10px;}
+            #sec1, #sec2, #sec3 {display: none;}
         </style>
     </head>
     <body>
@@ -19,12 +20,15 @@
         </header>
         <main>
             <section>
-                <button onClick="ifStatement()">Click me</button>
+                <button onClick="favouriteColour()", style="padding: 1rem 2rem;">Click me</button>
+                <div>
+                    <p id="p1">Text to be changed.</p>
+                </div>
             </section>
         </main>
         <footer>
         </footer>
-        <script>
+        <script src="js/script_1.js">
         </script>
     </body>
 </html>
