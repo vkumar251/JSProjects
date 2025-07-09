@@ -3,7 +3,6 @@ const colours = ["Red", "Blue", "Green", "Yellow", "Orange", "Purple", "Pink", "
 const subjects = ["Computer Science", "Discrete Mathematics", "Psychology", "Medicine", "Law"];
 const fruits = ["Apple", "Banana", "Orange", "Kiwi", "Mango"];
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
 function listColours()
 {
     let text = ""; // setup empty string to store the list items
@@ -69,4 +68,80 @@ function listNumber5()
     
     output.innerHTML = text;
     output.style.color = "green";
+}
+function indexArray()
+{
+    let arrayInput = prompt("Enter name of Array to de-index:");
+    if (arrayInput === "colours")
+    {
+        const indexInput = prompt("Enter an array index number.");
+
+        // validate input - input must not be less than 0 and must not exceed max array length
+        if (indexInput < 0 || indexInput > colours.length)
+        {
+            // display error message
+            alert("Invalid index number. Please enter a number between 0 and " + (colours.length - 1) + ".");
+            // 1 is deducted from colours.length as array indexing starts from 0
+        }
+        else
+        {
+            alert("The element at index " + indexInput + " is: " + colours[indexInput]);
+            console.log("Output successful.");
+        }
+    }
+    else if (arrayInput === "subjects")
+    {
+        const indexInput = prompt("Enter an array index number.");
+
+        if (indexInput < 0 || indexInput > subjects.length)
+        {
+            alert("Invalid index number. Please enter a number between 0 and " + (subjects.length - 1) + ".");
+            return; // terminate function
+        }
+
+        alert("The element at index " + indexInput + " is: " + subjects[indexInput]);
+        console.log("Output successful.");
+    }
+    else if (arrayInput === "fruits")
+    {
+        const indexInput = prompt("Enter an array index number.");
+
+        if (indexInput < 0 || indexInput > fruits.length)
+        {
+            alert("Invalid index number. Please enter a number between 0 and " + (fruits.length - 1) + ".");
+        }
+        else
+        {
+            alert("The element at index " + indexInput + " is: " + fruits[indexInput]);
+            console.log("Output successful.");
+        }
+    }
+    else if (arrayInput === "numbers")
+    {
+        const indexInput = prompt("Enter an array index number.");
+
+        if (indexInput < 0 || indexInput > numbers.length)
+        {
+            alert("Invalid index number. Please enter a number between 0 and " + (numbers.length - 1) + ".");
+            return;
+        }
+
+        alert("The element at index " + indexInput + " is: " + numbers[indexInput]);
+        console.log("Output successful.");
+    }
+    else
+    {
+        alert("Invalid array name. Please enter 'colours', 'subjects', 'fruits', or 'numbers'.");
+    }
+}
+function registerInput()
+{
+    let input = document.getElementById("searchInput").value;
+    console.log("Input received: " + input);
+}
+function input()
+{
+    let userInput = prompt("Enter an input:"); // prompt box
+
+    alert("The input entered is " + userInput + ".");
 }

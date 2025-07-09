@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible", content="IE-edge">
+        <title>Arrays | JSProject</title>
+        <link rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <link rel="stylesheet", href="css/style.css">
+        <style>
+            body {font-family: Arial;}
+            div {border: 2px solid black; width: 60%; margin: 2rem auto; padding: 2rem; text-align: center;}
+            h1 {font-size: 40px; padding-bottom: 1rem;}
+            h2 {font-size: 25px; padding-bottom: 1rem;}
+            h3 {font-size: 20px; padding-bottom: 1rem; color: #0027a7; font-style: italic;}
+            p {font-size: 20px;}
+            button {padding: 0.5rem 2rem; margin: 1rem; border: 2px solid black; cursor: pointer;}
+            label {font-size: 20px;}
+            input {border: 1px solid black; background-color: #e7fcff; font-size: 20px; padding: 5px;}
+            form {margin: 1rem;}
+            .output-box {background-color: rgb(215, 255, 225);}
+        </style>
+    </head>
+    <body>
+        <header>
+        </header>
+        <main>
+            <div>
+                <h1>Arrays</h1>
+                <p>This page is about Arrays:</p>
+            </div>
+            <div>
+                <h2>Load an Array List</h2>
+                <h3>Available lists: colours, subjects, fruits, numbers.</h3>
+                <form onSubmit="loadArray(event)", id="arraylist-form1">
+                    <label for="array-type">Enter an array list to load:</label><br>
+                    <input type="text", id="array-type" required><br>
+                    <button type="submit">Load Array</button>
+                </form>
+                <form id="arraylist-form2">
+                </form>
+                <div class="output-box", id="array-output">
+                </div>
+            </div>
+        </main>
+        <footer>
+        </footer>
+        <script src="js/arrays_3.js"></script>
+    </body>
+</html>
