@@ -161,8 +161,7 @@ function form()
 
         return input2;
     }
-    return // return functions as an object
-    {
+    return {
         createForm,
         createSubmitForm,
         createSubmitButton,

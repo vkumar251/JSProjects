@@ -323,7 +323,7 @@ class Gold
 const player = new Character("Player", "black", "blue", "blue", 200, 0, {x: 0, y: 0}, ["sword", "hat", "map", "bow", "torch", "axe"]);
 const enemy = new Character("Goblin", "crimson", "red", "brown", 100, 20, {x: 100, y: 200}, "sword");
 // create obstacles
-const pineTree = new Tree({x: 50, y: 100}, "pine", "large", 100, ["wood", "leaves"]);
+const pineTree = new Tree({x: 50, y: 100}, "pine", "large", 100, ["wood", "leaves", "pine-cones"]);
 const cactus = new Cactus({x: 200, y: 300}, "large", 3, 20);
 // items
 const chest = new Chest({x: 300, y: 400}, false, false, 30, "copper");
