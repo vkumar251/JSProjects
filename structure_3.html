@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible", content="IE-edge">
-        <title>Name | JSProject</title>
+        <title>Structure | JSProject</title>
         <link rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
         <link rel="stylesheet", href="css/style.css">
         <style>
@@ -17,16 +17,28 @@
             button {padding: 0.5rem 2rem; margin: 1rem; border: 2px solid black; cursor: pointer;}
             label {padding: 0.5rem; margin: 1rem;}
             input {padding: 0.5rem; margin: 1rem; border: 2px solid black;}
+            #spoiler {background-color: #cafbff; display: none;}
         </style>
     </head>
     <body>
         <header>
         </header>
         <main>
-            <!-- main content -->
+            <h1>Structure Page</h1>
+            <section id="section1">
+                <h2>Spoiler: Load and unload a div:</h2>
+                <button onClick="toggleSpoiler()">Click Me</button>
+                <div id="spoiler"> <!--spoiler-->
+                    <h3>This div has been opened.</h3>
+                </div>
+            </section>
+            <section id="section2">
+                <h2>Create a form:</h2>
+                <button onClick="appendForm()">Click Me</button>
+            </section>
         </main>
         <footer>
         </footer>
-        <script type="module", src=""></script>
+        <script src="js/structure_3.js"></script>
     </body>
 </html>
