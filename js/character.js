@@ -1,7 +1,3 @@
-/* import {publicFunction} from "./module.js";
-
-publicFunction(); */
-
 export class Character 
 {
     // constructor method for creating new character objects
@@ -91,7 +87,7 @@ export class Character
         console.log("Character coins updated to: " + this.goldCoins);
     }
 }
-class Chest
+export class Chest
 {
     constructor(position, isOpen, isLocked, coins, inventory)
     {
@@ -113,7 +109,7 @@ class Chest
         }
     }
 }
-class SteelChest
+export class SteelChest
 {
     constructor(position, isOpen, isLocked, coins, inventory)
     {
@@ -148,7 +144,7 @@ class SteelChest
         }
     }
 }
-class Tree
+export class Tree
 {
     constructor(position, type, size, health, inventory)
     {
@@ -201,7 +197,7 @@ class Tree
         }
     }
 }
-class Cactus
+export class Cactus
 {
     constructor(position, size, thorns, health)
     {
@@ -234,7 +230,7 @@ class Cactus
         console.log("Cactus is already destroyed.");
     }
 }
-class Key
+export class Key
 {
     constructor(position)
     {
@@ -248,7 +244,7 @@ class Key
     }
 }
 // misc items
-class Copper
+export class Copper
 {
     constructor()
     {
@@ -264,7 +260,7 @@ class Copper
         console.log("Value: " + this.value);
     }
 }
-class Gold
+export class Gold
 {
     constructor()
     {
@@ -318,53 +314,61 @@ class Gold
     }
 }
 
+function createObjects()
+{
+    // new character instances
+    const player = new Character("Player", "black", "blue", "blue", 200, 0, {x: 0, y: 0}, ["sword", "hat", "map", "bow", "torch", "axe"]);
+    const enemy = new Character("Goblin", "crimson", "red", "brown", 100, 20, {x: 100, y: 200}, "sword");
+    // create obstacles
+    const pineTree = new Tree({x: 50, y: 100}, "pine", "large", 100, ["wood", "leaves", "pine-cones"]);
+    const cactus = new Cactus({x: 200, y: 300}, "large", 3, 20);
+    // items
+    const chest = new Chest({x: 300, y: 400}, false, false, 30, "copper");
+    const steelChest = new SteelChest({x: 400, y: 600}, false, true, 60, ["diamond", "carbonado"]);
+    const key = new Key({x: 600, y: 800});
+    // misc
+    const copper = new Copper();
+    const gold = new Gold();
+}
 
-// new character instances
-const player = new Character("Player", "black", "blue", "blue", 200, 0, {x: 0, y: 0}, ["sword", "hat", "map", "bow", "torch", "axe"]);
-const enemy = new Character("Goblin", "crimson", "red", "brown", 100, 20, {x: 100, y: 200}, "sword");
-// create obstacles
-const pineTree = new Tree({x: 50, y: 100}, "pine", "large", 100, ["wood", "leaves", "pine-cones"]);
-const cactus = new Cactus({x: 200, y: 300}, "large", 3, 20);
-// items
-const chest = new Chest({x: 300, y: 400}, false, false, 30, "copper");
-const steelChest = new SteelChest({x: 400, y: 600}, false, true, 60, ["diamond", "carbonado"])
-const key = new Key({x: 600, y: 800});
 // misc
-const copper = new Copper();
-const gold = new Gold();
+function x()
+{
+    console.log("Player Details:");
+    console.log(player);
+    console.log(player.inventory);
+    console.log(player.position);
+    console.log("Enemy Details:");
+    console.log(enemy);
+    console.log(enemy.inventory);
+    console.log(enemy.position);
+    console.log("Obstacle Details:");
+    console.log(pineTree);
+    console.log(pineTree.type);
+    console.log(pineTree.size);
+    console.log(cactus);
+    console.log(cactus.size);
+    console.log("Item Details:");
+    console.log(chest);
+    console.log(chest.coins);
+    console.log(steelChest);
+    console.log(steelChest.inventory);
+    console.log(key);
+    console.log(key.position);
+}
+function z()
+{
+    console.log(chest);
+    console.log(chest.isOpen);
+    chest.openChest();
+    console.log(chest.isOpen);
 
+    console.log("Miscs:");
+    copper.displayProperties();
 
-/* console.log("Player Details:");
-console.log(player);
-console.log(player.inventory);
-console.log(player.position);
-console.log("Enemy Details:");
-console.log(enemy);
-console.log(enemy.inventory);
-console.log(enemy.position);
-console.log("Obstacle Details:");
-console.log(pineTree);
-console.log(pineTree.type);
-console.log(pineTree.size);
-console.log(cactus);
-console.log(cactus.size);
-console.log("Item Details:");
-console.log(chest);
-console.log(chest.coins);
-console.log(steelChest);
-console.log(steelChest.inventory);
-console.log(key);
-console.log(key.position); */
+    console.log(gold.displayProperties());
+    gold.getGoldValue();
+    gold.setPurity(24);
+    console.log(gold.displayProperties());
+}
 
-/* console.log(chest);
-console.log(chest.isOpen);
-chest.openChest();
-console.log(chest.isOpen); */
-
-/* console.log("Miscs:");
-copper.displayProperties(); */
-
-/* console.log(gold.displayProperties());
-gold.getGoldValue();
-gold.setPurity(24);
-console.log(gold.displayProperties()); */

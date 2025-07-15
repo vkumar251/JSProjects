@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible", content="IE-edge">
+        <title>Banking System | JSProject</title>
+        <link rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <link rel="stylesheet", href="css/style.css">
+        <style>
+            body {font-family: Arial;}
+            section {border: 2px dashed black; margin: 2rem;}
+            div {border: 2px solid black; width: 60%; margin: 2rem auto; padding: 2rem; text-align: center;}
+            h1 {font-size: 40px; text-align: center; margin: 2rem;}
+            h2 {font-size: 25px; padding: 1rem;}
+            p {font-size: 20px;}
+            button {padding: 0.5rem 2rem; margin: 1rem; border: 2px solid black; cursor: pointer;}
+            label {padding: 0.5rem; margin: 1rem;}
+            input {padding: 0.5rem; margin: 1rem; border: 2px solid black;}
+            .border {border: 2px solid black;}
+            .border-bottom {border-bottom: 0;}
+            .reset {width: auto; margin: 0; padding: 0; border: none;}
+            .flex {display: flex; justify-content: space-evenly;}
+            #account-holder {width: 50%;}
+        </style>
+    </head>
+    <body>
+        <header>
+        </header>
+        <main>
+            <h1>Banking System</h1>
+            <section style="padding: 2rem;">
+                <h2 class="border border-bottom", style="text-align: center; background-color: #acffa1;">Create Account:</h2>
+                <form class="border", style="background-color: #e0e0e0;">
+                    <div class="reset">
+                        <label for="account-holder">Account Holder:</label>
+                        <input type="text", id="account-holder" required>
+                    </div>
+                    <div class="reset flex">
+                        <div class="reset">
+                            <label for="account-no">Account Number:</label>
+                            <input type="text", id="account-no" required>
+                        </div>
+                        <div class="reset">
+                            <label for="sort-code">Account Sort Code:</label>
+                            <input type="text", id="sort-code" required>
+                        </div>
+                    </div>
+                    <div class="reset">
+                        <button type="submit", onClick="createAccount(event)">Open Account</button>
+                    </div>    
+                </form>
+                <div style="width: 100%; padding: 0;">
+                    <h2>Output:</h2>
+                    <p id="output1">Text</p>
+                </div>
+            </section>
+        </main>
+        <footer>
+        </footer>
+        <script type="module", src="js/banking.js"></script>
+    </body>
+</html>
