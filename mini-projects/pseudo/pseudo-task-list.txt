@@ -1,0 +1,26 @@
+Task List Algorithm:
+
+1. Create array for storing tasks.
+2. Use JS to create HTML: head, header, main and footer.
+3. Append content to the HTML document.
+4. Create two functions: addTask() and removeTask()
+
+addTask():
+- Create variable to get input from HTML textbox. (add .value to end of 'getElementById()')
+- Create getElementById variable, targeting element to output.
+- Add if statement, checking input is not empty.
+- Add input to registered array.
+- Create new variable and HTML element - li.
+- Add text content to new element, matching input.
+- Create new variable and HTML element - button. (to use for removing list item)
+- Add text content named "Remove".
+- (Optional) Add class name to button if linking it to pre-applied style sheet.
+- Create a "click" eventListener that calls removeTask([value]) method.
+- Append the button to new list item.
+- Append list item to target output element.
+
+removeTask(value):
+- Create index variable for getting children of parent node.
+- Get index of list items in current array.
+- Remove task from array.
+- Remove list item and button from DOM.

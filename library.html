@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible", content="IE-edge">
-        <title>Name | JSProject</title>
+        <title>Library | JSProject</title>
         <link rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
         <link rel="stylesheet", href="css/style.css">
         <style>
@@ -20,13 +20,28 @@
         </style>
     </head>
     <body>
-        <header>
+        <header style="display: flex;">
+            <h2>Control Panel:</h2>
+            <button onClick="toggleGlow()">H1: Toggle Glow</button>
+            <button>H2: Text</button>
         </header>
         <main>
-            <!-- main content -->
+            <h1 style="text-align: center; padding: 2rem; color: purple;", id="main-heading">Library</h1>
+            <section style="border: 2px solid black; background: gold;", class="s-class">
+                <div></div>
+                <div></div>
+            </section>
+            <section style="border: 2px solid black; background: purple;", class="s-class">
+                <div></div>
+                <div></div>
+            </section>
+            <section style="border: 2px solid black; background: green;", class="s-class">
+                <div></div>
+                <div></div>
+            </section>
         </main>
         <footer>
         </footer>
-        <script type="module", src="js/"></script>
+        <script src="js/library.js"></script>
     </body>
 </html>
