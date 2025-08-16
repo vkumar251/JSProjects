@@ -19,6 +19,7 @@ function toggleDarkMode()
     let h1 = document.querySelector("h1");
     let h2 = document.querySelector("h2");
     let nav = document.querySelectorAll("nav a");
+    let section2 = document.querySelector("#section2");
 
     // select class element(s)
     let grey = document.querySelector(".grey");
@@ -26,7 +27,7 @@ function toggleDarkMode()
     if (darkMode === false)
     {
         header.style.backgroundColor = "#0064ff";
-        main.style.backgroundColor = "black";
+        main.style.backgroundColor = "#303030";
         footer.style.backgroundColor = "#0064ff";
         footer.style.color = "black";
         p.style.color = "white";
@@ -37,7 +38,10 @@ function toggleDarkMode()
             nav[i].style.color = "black";
         }
 
-        grey.style.backgroundColor = "#2b2b2bff";
+        grey.style.backgroundColor = "#141414";
+        section2.style.backgroundColor = "#a34100";
+        section2.style.border = "2px solid white";
+        section2.style.color = "white";
         
         darkMode = true;
     }
@@ -56,6 +60,9 @@ function toggleDarkMode()
         }
 
         grey.style.backgroundColor = "#bebebe";
+        section2.style.backgroundColor = "#ffbf94";
+        section2.style.border = "2px solid black";
+        section2.style.color = "black";
 
         darkMode = false;
     }
@@ -69,6 +76,8 @@ function loadPage()
 
     document.head.innerHTML = displayHead;
     document.body.innerHTML = (displayHeader + displayMain + displayFooter);
+
+    customiseSection();
 }
 function generateHead()
 {
@@ -119,6 +128,10 @@ function generateMain()
       <h2>Dark & Light Mode</h2>
       <p>This is a sample web application page for testing dark and light mode.</p>
     </section>
+    <section id="section2">
+      <h2>Section 2</h2>
+      <p>This is the second section of the web application page with a unique ID.</p>
+    </section>
   </main>
   `
 }
@@ -131,8 +144,10 @@ function generateFooter()
     </footer>
     `
 }
-
-
-
-  
-  
+function customiseSection()
+{
+    // use querySelector to select the section with ID "section2"
+    let section2 = document.querySelector("#section2");
+    section2.style.backgroundColor = "#ffbf94";
+    section2.style.border = "2px solid black";
+}
