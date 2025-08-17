@@ -76,4 +76,17 @@ languages.shift(); // removes "HTML"
 // remove last element from array - using pop() method
 languages.pop(); // removes "Rust"
 
-// remove element at specific index - using splice() method
+const alphabet = [];
+alphabet.push("B", "C", "D"); // add B C D to array
+alphabet.shift(); // remove first element (B)
+alphabet.unshift("B"); // re-add B to start of array
+alphabet.unshift("A"); // add A to start of array
+// Output: A, B, C, D
+alphabet.pop(); // remove last element (D)
+alphabet.push("D"); // re-add D to end of array
+alphabet.push("E");
+alphabet.push("F");
+// Output: A, B, C, E, F
+
+// SLICE: Syntax: array.slice(start, end) - end index does not include the element at that index
+alphabet.slice(2, 5); // Output: C, D, E: C is at index 2, E is at index 4
