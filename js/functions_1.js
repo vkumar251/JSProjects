@@ -19,7 +19,7 @@ window.onload = function()
 
     this.output("Application loaded!");
 }
-function output(message)
+export function output(message)
 {
     switch (message)
     {
@@ -35,12 +35,12 @@ function output(message)
     }
 }
 // Basic function to greet a person
-function greet(name)
+export function greet(name)
 {
     console.log("Hello, " + name + "!");
 }
 // Object containing properties and method
-const cat =
+export const cat =
 {
     name: "Ziggy",
     breed: "Siamese",
@@ -53,23 +53,27 @@ const cat =
         console.log("Age: " + this.age);
         console.log("Is Tamed: " + this.isTamed);
     },
-    greet: function()
+    setTamed: function(value) // create cat.setTamed(true/false)
+    {
+        this.isTamed = value;
+    },
+    greet: function() // create cat.greet() 
     {
         console.log("Meow");
     },
 }
 // rectangle area
-function calculateRectangleArea(width, height)
+export function calculateRectangleArea(width, height)
 {
     return (width * height);
 }
 // rectangle perimeter
-function calculateRectanglePerim(width, height)
+export function calculateRectanglePerim(width, height)
 {
     return (width + height) * 2;
 }
 // circle circumference
-function calculateCircleCircumference(radius)
+export function calculateCircleCircumference(radius)
 {
     let diameter = (radius * 2);
     let circumference = (diameter * Math.PI);
