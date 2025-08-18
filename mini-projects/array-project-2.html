@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible", content="IE-edge">
+        <title>Array Project | JSProject</title>
+        <link rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <link rel="stylesheet", href="css/style.css">
+        <style>
+            body {font-family: Arial;}
+            section {border: 2px dashed black; margin: 2rem;}
+            div {border: 2px solid black; width: 45%; margin: 2rem auto; padding: 2rem; text-align: center;}
+            h1 {font-size: 40px; text-align: center; padding: 2rem;}
+            h2 {font-size: 25px; padding: 1rem;}
+            p {font-size: 20px;}
+            button {padding: 0.5rem 2rem; margin: 1rem; border: 2px solid black; cursor: pointer;}
+            label {padding: 0.5rem; margin: 1rem;}
+            input {padding: 0.5rem; margin: 1rem; border: 2px solid black;}
+            #array {background-color: #dbeff3;}
+            #array-output {background-color: #dcffd5;}
+            ol li {padding: 0;}
+        </style>
+    </head>
+    <body>
+        <header>
+        </header>
+        <main>
+            <h1>JS Array Methods Mini-Project</h1>
+            <div id="array">
+                <input type="text", id="elementInput", placeholder="Enter Element">
+                <button onClick="addElement()">Add Element</button>
+                <button onClick="removeFirstElement()">Remove First</button>
+                <button onClick="removeLastElement()">Remove Last</button>
+            </div>
+            <div id="array-output">
+                <h2>Array Elements:</h2>
+                <ol id="array-list">
+                    <!-- Array elements will be dynamically added here -->
+                </ol>
+            </div>
+        </main>
+        <footer>
+        </footer>
+        <script src="js/array-project.js"></script>
+    </body>
+</html>

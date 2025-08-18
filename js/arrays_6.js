@@ -88,5 +88,20 @@ alphabet.push("E");
 alphabet.push("F");
 // Output: A, B, C, E, F
 
-// SLICE: Syntax: array.slice(start, end) - end index does not include the element at that index
+
+// SLICE - is used to extract a portion of an array.
+// SLICE Syntax: array.slice(start, end) - end index does not include the element at that index
 alphabet.slice(2, 5); // Output: C, D, E: C is at index 2, E is at index 4
+
+
+// SPLICE - is used to add/remove elements from an array.
+// SPLICE Syntax: array.splice(start, deleteCount, item1, item2,...)
+const horoscopes = ["Capricorn", "Aquarius", "Pisces", "Aries", "Taurus", "Gemini"]
+horoscopes.push("Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius");
+
+console.log(horoscopes.splice(0, 1, "Capricorn")); // return Capricorn (but do not remove)
+horoscopes.splice(0, 1); // remove Capricorn
+horoscopes.unshift("Capricorn"); // add Capricorn back to start of array
+// new output: Aquarius, Pisces, Aries, Taurus, Gemini, Cancer, Leo, Virgo, Libra, Scorpio, Sagittarius
+
+horoscopes.splice(4, 2); // remove Taurus and Gemini - Taurus is at index 4.
