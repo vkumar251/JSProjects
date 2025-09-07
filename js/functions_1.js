@@ -79,4 +79,20 @@ export function calculateCircleCircumference(radius)
     let circumference = (diameter * Math.PI);
     return circumference.toFixed(2); // round to 2 decimal places
 }
-
+let car =
+{
+    colour: "Grey",
+    model: "Toyota",
+    year: 2020,
+    displayInfo: function()
+    {
+        console.log("Colour: " + this.colour);
+        console.log("Model: " + this.model);
+        console.log("Year: " + this.year);
+    }
+}
+let sendMessage = function()
+{
+    return "Message received!";
+}
+console.log(sendMessage());

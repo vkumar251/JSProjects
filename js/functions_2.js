@@ -69,3 +69,7 @@ export function checkAge()
     }
     console.log(isAdult);
 }
+export function test()
+{
+    return "Function returned";
+}
