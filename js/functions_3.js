@@ -142,7 +142,6 @@ function calculate(x, y)
     return result;
 }
 console.log(calculate(2.5, 3.2));
-
 function sendSpecialMessage(type, message)
 {
     const list = ["log", "warn", "error"];

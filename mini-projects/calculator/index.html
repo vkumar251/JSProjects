@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basic Calculator</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        body
+        {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .calculator 
+        {
+            display: inline-block;
+            text-align: left;
+        }
+        .calculator input 
+        {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+            width: calc(100% - 22px);
+        }
+        .buttons 
+        {
+            text-align: center;
+        }
+        .buttons button 
+        {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        #result 
+        {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Basic Calculator</h1>
+    <div class="calculator">
+        <input type="number" id="number1" placeholder="Enter first number">
+        <input type="number" id="number2" placeholder="Enter second number">
+        <div class="buttons">
+            <button onclick="calculate('add')">+</button>
+            <button onclick="calculate('subtract')">-</button>
+            <button onclick="calculate('multiply')">*</button>
+            <button onclick="calculate('divide')">/</button>
+        </div>
+        <div id="result"></div>
+    </div>
+    <script>
+        // Function to perform calculations
+        function calculate(operation) 
+        {
+            const number1 = parseFloat(document.getElementById('number1').value);
+            const number2 = parseFloat(document.getElementById('number2').value);
+            let result;
+
+            if (isNaN(number1) || isNaN(number2)) 
+            {
+                result = 'Please enter valid numbers.';
+            } 
+            else 
+            {
+                switch (operation) 
+                {
+                    case 'add':
+                        result = `${number1} + ${number2} = ${number1 + number2}`;
+                        break;
+                    case 'subtract':
+                        result = `${number1} - ${number2} = ${number1 - number2}`;
+                        break;
+                    case 'multiply':
+                        result = `${number1} * ${number2} = ${number1 * number2}`;
+                        break;
+                    case 'divide':
+                        if (number2 === 0) 
+                        {
+                            result = 'Cannot divide by zero.';
+                        } 
+                        else 
+                        {
+                            result = `${number1} / ${number2} = ${number1 / number2}`;
+                        }
+                        break;
+                    default:
+                        result = 'Unknown operation.';
+                }
+            }
+
+            document.getElementById('result').innerText = result;
+        }
+    </script>
+</body>
+</html>

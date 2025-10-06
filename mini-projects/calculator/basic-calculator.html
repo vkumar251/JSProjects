@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic Calculator | JSProject</title>
+  <link rel="stylesheet", href="class.css">
+  <style>
+    body {font-family: Arial, sans-serif; background: #dddddd;}
+    section {display: flex;}
+    div {margin: 2rem; padding: 1rem; border: 2px solid #333; background: #ffffff;}
+    p {font-size: 20px; text-align: center; color: #ac00a3;}
+    h1 {text-align: center;}
+    button, input {padding: 0.25rem 1rem;}
+    .result {margin: 1rem 0; border: 1px solid black;}
+    .w-50 {width: 50%; padding-bottom: 0;}
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="basic-calculator.html">Basic Calculator</a>
+      <a href="shape-calculator.html">Shape Calculator</a>
+      <a href="volume-calculator.html">Volume Calculator</a>
+      <a href="bmi-calculator.html">BMI Calculator</a>
+    </nav>
+  </header>
+  <main class="content">
+    <h1>Basic Calculator</h1>
+    <p>Page that displays and calculates basic arithmetic operations:</p>
+    <section>
+      <!-- Add -->
+      <div class="w-50">
+        <h2>Add:</h2>
+        <input type="number", id="addNum1", placeholder="First Number">
+        <input type="number", id="addNum2", placeholder="Second Number">
+        <button onClick="addNumbers()">Calculate</button>
+        <div class="result", id="add-result">Result:</div>
+      </div>
+      <!-- Subtract-->
+      <div class="w-50">
+        <h2>Subtract:</h2>
+        <input type="number", id="subNum1", placeholder="First Number">
+        <input type="number", id="subNum2", placeholder="Second Number">
+        <button onClick="subtractNumbers()">Calculate</button>
+        <div class="result", id="sub-result">Result:</div>
+      </div>
+    </section>
+    <section>
+      <!-- Multiply -->
+      <div class="w-50">
+        <h2>Multiply:</h2>
+        <input type="number", id="mulNum1", placeholder="First Number">
+        <input type="number", id="mulNum2", placeholder="Second Number">
+        <button onClick="multiplyNumbers()">Calculate</button>
+        <div class="result", id="mul-result">Result:</div>
+      </div>
+      <!--Divide-->
+      <div class="w-50">
+        <h2>Divide:</h2>
+        <input type="number", id="divNum1", placeholder="First Number">
+        <input type="number", id="divNum2", placeholder="Second Number">
+        <button onClick="divideNumbers()">Calculate</button>
+        <div class="result", id="div-result">Result:</div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p style="color: white;">&copy; 2024 JSProject. All rights reserved.</p>
+  </footer>
+  <script src="basic-calculator.js"></script>
+</body>
+</html>

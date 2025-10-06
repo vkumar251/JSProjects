@@ -31,6 +31,17 @@
         <script type="module", src="js/functions_2.js"></script>
         <script type="module", src="js/functions_3.js"></script> -->
         <script>
+            function greetUser(name, functionName)
+            {
+                const greetMessage = `Hello, ${name}!`;
+                functionName(greetMessage);
+            }
+            function displayGreeting(message)
+            {
+                console.log(message);
+            }
+
+            greetUser("John Doe", displayGreeting);
         </script>
     </body>
 </html>
