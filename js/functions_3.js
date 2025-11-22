@@ -18,6 +18,7 @@ window.onload = function()
     window.multiply = functions_2.multiply;
     window.divide = functions_2.divide;
     window.checkAge = functions_2.checkAge;
+    window.test = functions_2.test;
 
     // make global scope accessible from other scripts
     window.functions_1 = functions_1;
@@ -27,18 +28,25 @@ window.onload = function()
     window.run = run;
     window.execute = execute;
     window.getRandom = getRandom;
-
-    document.querySelector("title").textContent = "Functions | JSProject";
+    window.sendMessage = sendMessage;
+    window.sendSpecialMessage = sendSpecialMessage;
+    window.printMessage = printMessage;
+    window.calculate = calculate;
 
     // call functions
     loadPage();
     run();
     sendMessage();
+    execute();
 
     console.log(factorial(7));
     console.log(square(5));
     greetUser("Dave");
     add(5, 3);
+
+    // document title
+    document.querySelector("title").textContent = "Functions | JSProject";
+    console.clear();
 }
 
 let x = 7;
@@ -77,6 +85,15 @@ function run()
 }
 function execute()
 {
+    const main = document.querySelector("main");
+    main.style.textAlign = "center";
+    main.style.color = "navy";
+    main.style.textShadow = "5px 5px 5px #b9007c";
+    main.innerHTML = // display result of 2 + 5 into HTML
+    `
+    <h1>Functions Document</h1>
+    <div>Add Output: ${add(2, 5)}</div>
+    `;
 }
 let sendMessage = function() // anonymous function + function expression
 {
@@ -99,15 +116,48 @@ let square = (x) => (x * x); // arrow function
 let greetUser = (name) => // arrow function with parameter
 {
     let greeting = `Hello, ${name}!`;
-    console.log(greeting);
+    return greeting;
 }
 let add = (a, b) =>
 {
     let result = (a + b);
-    console.log("Addition Result:", result);
+    return result;
 }
 let getRandom = () =>
 {
     let output = (Math.random() * 100); // generate random number between 0 and 100
     return output.toFixed(0); // round to nearest integer
 }
+
+// more functions
+function printMessage()
+{
+    console.log("Message successfully received!");
+}
+printMessage();
+
+function calculate(x, y)
+{
+    let result = (x + y);
+    return result;
+}
+console.log(calculate(2.5, 3.2));
+function sendSpecialMessage(type, message)
+{
+    const list = ["log", "warn", "error"];
+    switch (type)
+    {
+        case list[0]: // log message
+            console.log(message);
+            break;
+        case list[1]: // warning message
+            console.warn(message);
+            break;
+        case list[2]: // error message
+            console.error(message);
+            break;
+        default:
+            console.log("Invalid type!");
+    }
+}
+

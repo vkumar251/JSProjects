@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible", content="IE-edge">
-        <title>Name | JSProject</title>
+        <title>Functions | JSProject</title>
         <link rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
         <link rel="stylesheet", href="css/style.css">
         <style>
@@ -28,7 +28,20 @@
         <footer>
         </footer>
 <!--    <script type="module", src="js/functions_1.js"></script>
-        <script type="module", src="js/functions_2.js"></script> -->
-        <script type="module", src="js/functions_3.js"></script>
+        <script type="module", src="js/functions_2.js"></script>
+        <script type="module", src="js/functions_3.js"></script> -->
+        <script>
+            function greetUser(name, functionName)
+            {
+                const greetMessage = `Hello, ${name}!`;
+                functionName(greetMessage);
+            }
+            function displayGreeting(message)
+            {
+                console.log(message);
+            }
+
+            greetUser("John Doe", displayGreeting);
+        </script>
     </body>
 </html>
