@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shape Calculator | JSProject</title>
+  <link rel="stylesheet", href="class.css">
+  <style>
+    body {font-family: Arial, sans-serif; background: #dddddd;}
+    div {margin: 2rem; padding: 1rem; border: 2px solid #333; background: #ffffff;}
+    p {font-size: 20px; text-align: center; color: #ac00a3;}
+    h1 {text-align: center;}
+    button, input {padding: 0.25rem 1rem;}
+    .result {margin: 1rem 0; border: 1px solid black;}
+    .w-20 {width: 20%;}
+    .w-50 {width: 50%; padding-bottom: 0;}
+    .w-70 {width: 70%;}
+    .margin-auto {margin-left: auto; margin-right: auto;}
+    .flex {display: flex; gap: 20px;}
+    .reset {margin: 0; padding: 0; border: none; background: none;}
+    .m-1 {margin: 1rem 0;}
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="basic-calculator.html">Basic Calculator</a>
+      <a href="shape-calculator.html">Shape Calculator</a>
+      <a href="volume-calculator.html">Volume Calculator</a>
+      <a href="bmi-calculator.html">BMI Calculator</a>
+    </nav>
+  </header>
+  <main class="content">
+    <h1>Shape Calculator</h1>
+    <p>This page calculates the perimeter, circumference and area of 2D shapes:</p>
+    <section>
+        <!-- Square -->
+        <div class="w-70 margin-auto">
+            <h2>Square:</h2>
+            <input type="number", id="sq-length", placeholder="Length", class="w-20">
+            <div class="flex reset">
+                <button onClick="calcSquarePerim()", class="m-1 w-20">Calculate Perimeter</button>
+                <button onClick="calcSquareArea()", class="m-1 w-20">Calculate Area</button>
+            </div>
+            <div class="result", id="sq-result">Result:</div>
+        </div>
+        <!-- Rectangle -->
+        <div class="w-70 margin-auto">
+            <h2>Rectangle:</h2>
+            <div class="flex reset">
+                <input type="number", id="rec-height", placeholder="Height", class="w-20">
+                <input type="number", id="rec-width", placeholder="Width", class="w-20">
+            </div>
+            <div class="flex reset">
+                <button onClick="calcRectanglePerim()", class="m-1 w-20">Calculate Perimeter</button>
+                <button onClick="calcRectangleArea()", class="m-1 w-20">Calculate Area</button>
+            </div>
+            <div class="result", id="rec-result">Result:</div>
+        </div>
+        <!-- Circle -->
+        <div class="w-70 margin-auto">
+          <h2>Circle:</h2>
+          <div class="flex reset">
+              <input type="number", id="cir-diameter", placeholder="Diameter", class="w-20">
+          </div>
+          <div class="flex reset">
+              <button onClick="calcCircleCircum()", class="m-1 w-20">Calculate Circumference</button>
+              <button onClick="calcCircleArea()", class="m-1 w-20">Calculate Area</button>
+          </div>
+          <div class="result", id="cir-result">Result:</div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p style="color: white;">&copy; 2024 JSProject. All rights reserved.</p>
+  </footer>
+  <script src="shape-calculator.js"></script>
+</body>
+</html>
